@@ -1,0 +1,65 @@
+.Shop-block{
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: violet;
+}
+.Menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 750px;
+    height: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: red;
+    margin-right: auto;
+    margin-left: auto;
+}
+.Div-block{
+    width: 750px;
+    height: max-content;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: green;
+}
+
+.Menu a{
+    text-align: center;
+
+    width: 50%;
+    height: 50%;
+    text-decoration: none;
+    color: black;
+    outline: 0;
+
+    flex-basis: max-content;
+    display: flex;
+    flex-flow: column;
+    flex-direction: row;
+    background-color: green;
+
+
+    text-decoration: inherit;
+    padding: 0 5px 0 5px ;
+    margin: auto ;
+}.Menu a p{
+    text-align: inherit;
+    text-decoration: inherit;
+    color: inherit;
+    outline: inherit;
+    padding: 0 5px 0 5px ;
+    margin: auto ;
+
+}
+p{
+
+}
+.Footer-block {
+    background-color: rgba(62, 62, 62, 0.5);
+    margin: auto;
+    width: 800px;
+    height: 80px;
+}
