@@ -20,5 +20,10 @@ from ShopApp import views
 
 urlpatterns = [
     path('', views.index),
+    path('index', views.index),
+    path('PageUrl_2', views.PageUrl_2),
+    path('PageUrl_3', views.PageUrl_3),
+    path('PageUrl_4', views.PageUrl_4),
+    path('PageUrl_5', views.PageUrl_5),
     path('admin/', admin.site.urls),
 ]

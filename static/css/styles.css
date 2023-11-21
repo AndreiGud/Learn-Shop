@@ -16,15 +16,7 @@
     margin-right: auto;
     margin-left: auto;
 }
-.Div-block{
-    width: 750px;
-    height: max-content;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: green;
-}
+
 
 .Menu a{
     text-align: center;
@@ -45,7 +37,8 @@
     text-decoration: inherit;
     padding: 0 5px 0 5px ;
     margin: auto ;
-}.Menu a p{
+}
+.Menu a p{
     text-align: inherit;
     text-decoration: inherit;
     color: inherit;
@@ -62,4 +55,45 @@ p{
     margin: auto;
     width: 800px;
     height: 80px;
+}
+.Div-block{
+    width: 800px;
+    height: max-content;
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: green;
+}
+.Div-block .ItemContainer{
+    display: flex;
+    width: 800px;
+    height: max-content;
+    background-color: red;
+    margin-right: auto;
+    margin-left: auto;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Div-block .ItemContainer .Item{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    background-color: #ffae00;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.Div-block .ItemContainer .Item img{
+    background-color: #815500;
+}
+.Div-block .ItemContainer .Item p{
+    display: block;
+    background-color: #ff6a00;
 }

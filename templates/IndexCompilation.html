@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+{% load static %}
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+   {% block title %} <title>Стартовая страница</title> {% endblock %}
+    <link rel="stylesheet" href="{% static 'css\styles.css' %}">
+</head>
+{% endblock %}
+{% block body %}
+<body>
+    <div class="Shop-block" >
+     {% block menu %}
+         <div class="Menu" >
+                <a href="index">
+                    <p>Ссылка 1</p>
+                </a>
+
+                <a href="PageUrl_2">
+                     <p>Ссылка 2</p>
+                </a>
+
+                <a href="PageUrl_3">
+                    <p>Ссылка 3</p>
+                </a>
+                <a href="PageUrl_4">
+                    <p>Ссылка 4</p>
+                </a>
+                <a href="PageUrl_5">
+                    <p>Ссылка 5</p>
+                </a>
+        </div>
+       {% endblock %}
+
+            <div class="Div-block" >
+        {% block PageItemsBlock %}
+            <p>Съешь ещё этих мягких французских булок, да выпей ягу.</p>
+
+            {% endblock %}
+            {% block ItemContainer %}
+                <div class="ItemContainer">
+                    {% block items-in-container %}
+                        <div class="Item">Пустой предмет 1</div>
+                        <div class="Item">Пустой предмет 2</div>
+                        <div class="Item">Пустой предмет 3</div>
+                        <div class="Item">Пустой предмет 4</div>
+                    {% endblock %}
+                </div>
+
+        {% endblock %}
+
+        </div>
+        <div class="Div-block" >
+            <p>1234567890</p>
+        </div>
+        <div class="Div-block" >
+            <p>1234567890</p>
+        </div>
+
+    {% block footer %}<div class="Footer-block">
+
+    </div>
+    {% endblock %}
+
+    </div>
+</body>
+{% endblock %}
+</html>
