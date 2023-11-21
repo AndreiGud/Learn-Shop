@@ -92,8 +92,16 @@ p{
 }
 .Div-block .ItemContainer .Item img{
     background-color: #815500;
+    flex-grow: 0.5;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }
 .Div-block .ItemContainer .Item p{
     display: block;
+    flex-grow: 0.2;
+    max-height: 50%;
+    max-width: 100%;
     background-color: #ff6a00;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }

@@ -19,7 +19,7 @@
                 </a>
 
                 <a href="PageUrl_2">
-                     <p>Ссылка 2</p>
+                     <p>Страница предметов</p>
                 </a>
 
                 <a href="PageUrl_3">
@@ -35,36 +35,21 @@
        {% endblock %}
 
             <div class="Div-block" >
-        {% block PageItemsBlock %}
-            <p>Съешь ещё этих мягких французских булок, да выпей ягу.</p>
 
-            {% endblock %}
+        {% block PageItemsBlock %}{% endblock %}
+
             {% block ItemContainer %}
                 <div class="ItemContainer">
-                    {% block items-in-container %}
-                        <div class="Item">Пустой предмет 1</div>
-                        <div class="Item">Пустой предмет 2</div>
-                        <div class="Item">Пустой предмет 3</div>
-                        <div class="Item">Пустой предмет 4</div>
-                    {% endblock %}
+                    {% block items-in-container %}{% endblock %}
                 </div>
-
-        {% endblock %}
-
-        </div>
-        <div class="Div-block" >
-            <p>1234567890</p>
-        </div>
-        <div class="Div-block" >
-            <p>1234567890</p>
-        </div>
-
+            {% endblock %}
+            </div>
     {% block footer %}<div class="Footer-block">
 
     </div>
     {% endblock %}
 
     </div>
-</body>
+    </body>
 {% endblock %}
 </html>

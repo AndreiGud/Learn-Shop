@@ -8,7 +8,14 @@ def index(request):
 
 
 def PageUrl_2(request):
-    return render(request, "PageUrl2.html", context={'data': [1, 2]})
+    return render(request, "PageUrl2.html", context={'data': [['Первый предмет', 'itemscr'],
+                                                              ['Второй предмет', 'imtemscr'],
+                                                              ['Третий предмет', 'imtemscr'],
+                                                              ['Четвёртый предмет', 'imtemscr'],
+                                                              ['Новый предмет', 'imtemscr'],
+                                                              ['Новый предмет', 'imtemscr'],
+                                                              ['Новый предмет', 'imtemscr'],
+                                                              ['Новый предмет', 'imtemscr']]})
 
 
 def PageUrl_3(request):

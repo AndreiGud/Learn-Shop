@@ -2,24 +2,26 @@
 
 
 {% block title %}
- <title>Ссылка 2</title>
+ <title>Страница предметов</title>
 {% endblock %}
 
 {% block PageItemsBlock %}
-    <p>Надстройка</p>
+    <p>Дополнительное описание про предметы <br>
+    Предметы сделаны через цикл for в django синтаксисе <br>
+    Список получаем через view.py кортежем {'key': data} key-ключ data-массив с данными строк ['текст','ссылка на изображение'}</p>
 {% endblock %}
  {% block items-in-container %}
   
-     {% for foo in data %}
+     {% for text , scr_text in data %}
      <div class="Item">
-         <img src="" alt="pic">
-         <p>{{ foo }}</p>
+         <img src="{{ scr_text }}" alt="{{ scr_text }}{{ forloop.counter }}">
+         <p>{{ text }}</p>
      </div>
+         {% empty %}
+        <p>Пусто предметов нет</p>
      {% endfor %}
      
-     <div class="Item">
-         <img src="" alt="pic">
-         <p>Текст предмета</p>  
+
      </div>
    {% comment %}
   <div class="Item">Тут нечего нет на ссылке 2\2</div>
@@ -38,12 +40,6 @@
   <div class="Item">Тут нечего нет на ссылке 2\15</div>
   <div class="Item">Тут нечего нет на ссылке 2\16</div>
     {% endcomment %}
-{% endblock %}
-
-{% block footer %}
-<p>1234567890</p>
-<p>1234567890</p>
-<p>1234567890</p>
 {% endblock %}
 
 
