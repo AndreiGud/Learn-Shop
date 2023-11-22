@@ -6,6 +6,31 @@
 {% endblock %}
 
 
+{% block PageItemsBlock %}
+    <p>Дополнительное описание про index.html <br>
+   в views.py указан массив с перетасованным массивом предметов и передан в этот шаблон страницы <br>
+    Список получаем через view.py кортежем {'key': data} key-ключ data-массив с данными строк ['текст','ссылка на изображение', ссылка на url предмета}<br>
+    data-является перемешанным массивом
+    </p>
+{% endblock %}
+ {% block items-in-container %}
+
+     {% for text , scr_text ,href in data %}
+         {% if forloop.counter < 9%}
+
+
+     <a  href="{{ href }}" class="Item">
+         <img src="{{ scr_text }}" alt="{{ scr_text }}-{{ forloop.counter }}">
+         <p>{{ text }}</p>
+     </a>
+        {% endif %}
+         {% empty %}
+        <p>Пусто предметов нет</p>
+
+     {% endfor %}
+
+{% endblock %}
+
 
 
 

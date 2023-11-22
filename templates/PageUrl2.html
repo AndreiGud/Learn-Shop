@@ -8,38 +8,19 @@
 {% block PageItemsBlock %}
     <p>Дополнительное описание про предметы <br>
     Предметы сделаны через цикл for в django синтаксисе <br>
-    Список получаем через view.py кортежем {'key': data} key-ключ data-массив с данными строк ['текст','ссылка на изображение'}</p>
+    Список получаем через view.py кортежем {'key': data} key-ключ data-массив с данными строк ['текст','ссылка на изображение', ссылка на url предмета}</p>
 {% endblock %}
  {% block items-in-container %}
   
-     {% for text , scr_text in data %}
-     <div class="Item">
+     {% for text , scr_text, href in data %}
+     <a href="{{ href }}" class="Item">
          <img src="{{ scr_text }}" alt="{{ scr_text }}{{ forloop.counter }}">
          <p>{{ text }}</p>
-     </div>
+     </a>
          {% empty %}
         <p>Пусто предметов нет</p>
      {% endfor %}
-     
 
-     </div>
-   {% comment %}
-  <div class="Item">Тут нечего нет на ссылке 2\2</div>
-  <div class="Item">Тут нечего нет на ссылке 2\3</div>
-  <div class="Item">Тут нечего нет на ссылке 2\4</div>
-  <div class="Item">Тут нечего нет на ссылке 2\5</div>
-  <div class="Item">Тут нечего нет на ссылке 2\6</div>
-  <div class="Item">Тут нечего нет на ссылке 2\7</div>
-  <div class="Item">Тут нечего нет на ссылке 2\8</div>
-  <div class="Item">Тут нечего нет на ссылке 2\9</div>
-  <div class="Item">Тут нечего нет на ссылке 2\10</div>
-  <div class="Item">Тут нечего нет на ссылке 2\11</div>
-  <div class="Item">Тут нечего нет на ссылке 2\12</div>
-  <div class="Item">Тут нечего нет на ссылке 2\13</div>
-  <div class="Item">Тут нечего нет на ссылке 2\14</div>
-  <div class="Item">Тут нечего нет на ссылке 2\15</div>
-  <div class="Item">Тут нечего нет на ссылке 2\16</div>
-    {% endcomment %}
 {% endblock %}
 
 
