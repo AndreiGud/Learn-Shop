@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+{% load static %}
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+   {% block title %} <title>Аккаунт</title> {% endblock %}
+    <link rel="stylesheet" href="{% static 'css\styles.css' %}">
+</head>
+{% endblock %}
+{% block body %}
+<body>
+
+    <div class="Top-panel">
+        <a href="">
+            ссылка 1
+
+        </a>
+        <a href="">
+            ссылка 2
+        </a>
+        <a href="">
+            Вход
+        </a>
+        <a href="">
+            Выход
+        </a>
+
+    </div>
+
+
+    <div class="Shop-block" >
+     {% block menu %}
+         <div class="Menu" >
+                <a href="index">
+                    <p>Страница index</p>
+                </a>
+
+                <a href="PageUrl_2">
+                     <p>Страница предметов</p>
+                </a>
+
+                <a href="PageUrl_3">
+                    <p>Ссылка 3</p>
+                </a>
+                <a href="PageUrl_4">
+                    <p>Ссылка 4</p>
+                </a>
+                <a href="PageUrl_5">
+                    <p>Ссылка 5</p>
+                </a>
+        </div>
+       {% endblock %}
+
+
+
+        {% block Login %}{% endblock %}
+        {% block Account %}{% endblock %}
+
+    {% block footer %}<div class="Footer-block">
+    <p>Текст футера общий текст</p>
+    <p>Текст футера общий текст</p>
+    <p>Текст футера общий текст</p>
+    <p>Текст футера общий текст</p>
+    </div>
+    {% endblock %}
+
+    </div>
+    </body>
+{% endblock %}
+</html>

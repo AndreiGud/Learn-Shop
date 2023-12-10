@@ -25,5 +25,7 @@ urlpatterns = [
     path('PageUrl_3', views.PageUrl_3),
     path('PageUrl_4', views.PageUrl_4),
     path('PageUrl_5', views.PageUrl_5),
+    path('Login', views.Login),
+    path('Account', views.Account_User),
     path('admin/', admin.site.urls),
 ]

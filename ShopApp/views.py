@@ -40,3 +40,11 @@ def PageUrl_4(request):
 
 def PageUrl_5(request):
     return render(request, "PageUrl5.html")
+
+
+def Login(request):
+    return render(request, "Login.html")
+
+
+def Account_User(request):
+    return render(request, "UserRoom.html")
