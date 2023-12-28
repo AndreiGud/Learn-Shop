@@ -16,16 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import re_path
 from ShopApp import views
 
 urlpatterns = [
-    path('', views.index),
-    path('index', views.index),
-    path('PageUrl_2', views.PageUrl_2),
-    path('PageUrl_3', views.PageUrl_3),
-    path('PageUrl_4', views.PageUrl_4),
-    path('PageUrl_5', views.PageUrl_5),
-    path('Login', views.Login),
-    path('Account', views.Account_User),
+    re_path(r'^$', views.indexListView.as_view(), name="index"),
+    re_path(r"^catalog/$", views.CatalogListView.as_view(), name="catalog"),
+    path('books/', views.CatalogListViewN.as_view(), name='books'),
+    re_path(r'^book/(?P<pk>\d+)$', views.CatalogListViewN.as_view(), name='booksn'),
+    re_path(r'^PageUrl_3', views.PageUrl_3, name="PageUrl_3"),
+    re_path(r'^PageUrl_4', views.PageUrl_4, name="PageUrl_4"),
+    re_path(r'^PageUrl_5', views.PageUrl_5, name="PageUrl_5"),
+    re_path(r'^Login', views.Login, name="Login"),
+    re_path(r'^Account', views.Account_User, name="Account_User"),
     path('admin/', admin.site.urls),
 ]

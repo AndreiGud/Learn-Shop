@@ -5,7 +5,7 @@
 {% block head %}
 <head>
     <meta charset="UTF-8">
-   {% block title %} <title>Стартовая страница</title> {% endblock %}
+   {% block title %} <title>Страница</title> {% endblock %}
     <link rel="stylesheet" href="{% static 'css\styles.css' %}">
 </head>
 {% endblock %}
@@ -33,21 +33,21 @@
     <div class="Shop-block" >
      {% block menu %}
          <div class="Menu" >
-                <a href="index">
+                <a href="{% url 'index' %}">
                     <p>Страница index</p>
                 </a>
 
-                <a href="PageUrl_2">
+                <a href="{% url 'catalog' %}">
                      <p>Страница предметов</p>
                 </a>
 
-                <a href="PageUrl_3">
+                <a href="{% url 'PageUrl_3' %}">
                     <p>Ссылка 3</p>
                 </a>
-                <a href="PageUrl_4">
+                <a href="{% url 'PageUrl_4' %}">
                     <p>Ссылка 4</p>
                 </a>
-                <a href="PageUrl_5">
+                <a href="{% url 'PageUrl_5' %}">
                     <p>Ссылка 5</p>
                 </a>
         </div>
@@ -55,6 +55,8 @@
 
             <div class="Div-block" >
 
+        {% block Login %}{% endblock %}
+        {% block Account %}{% endblock %}
         {% block PageItemsBlock %}{% endblock %}
 
             {% block ItemContainer %}

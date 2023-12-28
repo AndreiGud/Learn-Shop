@@ -1,5 +1,7 @@
 from django.shortcuts import render
 import random
+from django.views import generic
+from .models import type_every, types_item, item_catalog
 # Create your views here.
 test_list = [['Первый предмет', 'imtemscr', ''],
                  ['Второй предмет', 'imtemscr', ''],
@@ -26,8 +28,26 @@ def index(request):
     return render(request, "index.html", context= {'data': shuffle_list })
 
 
-def PageUrl_2(request):
-    return render(request, "PageUrl2.html", context={'data': test_list})
+class indexListView(generic.ListView):
+    model = item_catalog
+    context_object_name = 'data'
+    template_name = 'Index.html'
+
+
+def Catalog(request):
+    return render(request, "Catalog.html", context={'data': test_list})
+
+
+class CatalogListView(generic.ListView):
+    model = item_catalog
+    context_object_name = 'data'
+    template_name = 'Catalog.html'
+
+
+class CatalogListViewN(generic.DetailView):
+    model = item_catalog
+    context_object_name = 'my_book_list'
+    template_name = 'CatalogItem.html'
 
 
 def PageUrl_3(request):

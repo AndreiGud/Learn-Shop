@@ -126,7 +126,7 @@ p{
 .Div-block .ItemContainer .Item{
     display: flex;
     flex: 0 0 24.81%;
-    justify-content: flex-start;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
     width: 170px;
@@ -138,6 +138,8 @@ p{
     flex-grow: 0.5;
     min-height: 100px;
     min-width: 100px;
+    max-height: 100px;
+    max-width: 190px;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }

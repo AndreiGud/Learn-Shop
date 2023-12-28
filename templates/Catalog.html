@@ -2,15 +2,14 @@
 
 
 {% block title %}
- <title>Стартовая 1</title>
+ <title>Страница предметов</title>
 {% endblock %}
-
 
 {% block PageItemsBlock %}
 
 {% endblock %}
  {% block items-in-container %}
-
+  
      {% for item in data %}
      <a href="{{ item.get_absolute_url }}" class="Item">
          <img src="/{{ item.path_image }}">
@@ -21,11 +20,6 @@
      {% endfor %}
 
 {% endblock %}
-
-
-
-
-
 
 
 
