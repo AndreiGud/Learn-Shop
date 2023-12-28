@@ -1,0 +1,38 @@
+{% extends "BaseTemplate.html" %}
+
+
+{% block title %}
+ <title>Страница предметов</title>
+{% endblock %}
+
+{% block PageItemsBlock %}
+{% endblock %}
+ {% block items-in-container %}
+
+     <div>
+        {{ my_book_list }}1<br><br>
+        <img src="/{{ my_book_list.path_image }}"><br>
+        <p>{{ my_book_list.title }}</p>3<br><br>
+         {% for type in my_book_list.type_item.all %}
+         <p>{{ type }}</p>4
+         {% empty %}
+         <p>Без типов</p>5
+         {% endfor %}
+         <br><br>
+            {{ my_book_list.types_item|default_if_none:"nothing" }}
+        <p>{{ my_book_list.types_item }}</p>6<br>
+        <p>{{ my_book_list.path_image }}</p>7
+    </div>
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+

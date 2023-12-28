@@ -20,9 +20,9 @@ from django.urls import re_path
 from ShopApp import views
 
 urlpatterns = [
-    re_path(r'^$', views.indexListView.as_view(), name="index"),
+    path('', views.indexListView.as_view(), name="index"),
     re_path(r"^catalog/$", views.CatalogListView.as_view(), name="catalog"),
-    path('books/', views.CatalogListViewN.as_view(), name='books'),
+    re_path(r'^books/$', views.CatalogListViewN.as_view(), name='books'),
     re_path(r'^book/(?P<pk>\d+)$', views.CatalogListViewN.as_view(), name='booksn'),
     re_path(r'^PageUrl_3', views.PageUrl_3, name="PageUrl_3"),
     re_path(r'^PageUrl_4', views.PageUrl_4, name="PageUrl_4"),

@@ -29,9 +29,10 @@ def index(request):
 
 
 class indexListView(generic.ListView):
-    model = item_catalog
+   #model = item_catalog
     context_object_name = 'data'
     template_name = 'Index.html'
+    queryset = item_catalog.objects.order_by('?')
 
 
 def Catalog(request):
